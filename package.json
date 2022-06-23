@@ -1,5 +1,5 @@
 {
-  "name": "search",
+  "name": "searchl",
   "version": "1.0.0",
   "description": "\"Simple light weight package for auto completion\"",
   "main": "index.js",
@@ -15,7 +15,10 @@
     "autocomplete",
     "node",
     "node-search",
-    "array-search"
+    "array-search",
+    "filter",
+    "array",
+    "array-filter"
   ],
   "author": "langesh",
   "license": "ISC",

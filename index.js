@@ -1,13 +1,13 @@
-function filterData(data, searchItem) {
+function filter(data, searchItem) {
   const temp = data.slice();
 
   const regex = new RegExp(searchItem, "gi");
 
   const filteredData = temp.filter((item) => regex.test(item));
 
-  if (filterData.length === 0) return data;
+  if (filteredData.length === 0) return data;
 
   return filteredData;
 }
 
-module.exports = { filterData };
+module.exports = { filter };
