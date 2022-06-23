@@ -21,7 +21,6 @@ The function will return all the matched cases in an array
 ## Example
 
 ```
-
 const { filter } = require("searchl");
 
 const array = ["apple", "banana", "mango", "grapes"];
@@ -29,8 +28,6 @@ const array = ["apple", "banana", "mango", "grapes"];
 const filteredData = filter(array , "e");
 
 console.log(filteredData);
-
-
 ```
 
 ### Output

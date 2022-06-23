@@ -1,6 +1,6 @@
 {
   "name": "searchl",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Simple light weight package for filtering data in an array",
   "main": "index.js",
   "scripts": {
