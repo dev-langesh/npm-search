@@ -1,7 +1,7 @@
 {
   "name": "searchl",
-  "version": "1.0.0",
-  "description": "\"Simple light weight package for auto completion\"",
+  "version": "1.0.1",
+  "description": "Simple light weight package for filtering data in an array",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/dev-langesh/npm-search/issues"
   },
-  "homepage": "https://github.com/dev-langesh/npm-search#readme"
+  "homepage": "https://github.com/dev-langesh/npm-search#readme",
+  "dependencies": {
+    "jest": "^28.1.1"
+  }
 }

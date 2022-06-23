@@ -1,13 +1,27 @@
 function filter(data, searchItem) {
   const temp = data.slice();
 
-  const regex = new RegExp(searchItem, "gi");
+  const regex = new RegExp(searchItem.trim(), "gi");
 
-  const filteredData = temp.filter((item) => regex.test(item));
+  let filteredData = [];
+  filteredData = temp.filter((item) => regex.test(item));
 
-  if (filteredData.length === 0) return data;
+  if (filteredData.length === 0) {
+    if (/\s/g.test(searchItem)) {
+      const splittedValue = searchItem.split(" ");
+
+      for (let i of splittedValue) {
+        const reg = new RegExp(i, "gi");
+        filteredData.push(...temp.filter((item) => reg.test(item)));
+      }
+    }
+  }
+
+  filteredData = [...new Set(filteredData)];
 
   return filteredData;
 }
+
+console.log(filter(["apple", "mango", "papayaa", "grapes"], "a e"));
 
 module.exports = { filter };
