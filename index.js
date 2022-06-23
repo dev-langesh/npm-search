@@ -22,6 +22,4 @@ function filter(data, searchItem) {
   return filteredData;
 }
 
-console.log(filter(["apple", "mango", "papayaa", "grapes"], "a e"));
-
 module.exports = { filter };
