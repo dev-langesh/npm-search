@@ -26,7 +26,5 @@
     "url": "https://github.com/dev-langesh/npm-search/issues"
   },
   "homepage": "https://github.com/dev-langesh/npm-search#readme",
-  "dependencies": {
-    "jest": "^28.1.1"
-  }
+  "dependencies": {}
 }
