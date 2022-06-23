@@ -1,6 +1,6 @@
 # searchl
 
-An extrordinary package for searching item in an array written with simple js.
+An extraordinary package for searching item in an array written with simple js.
 
 ## Using Package
 
