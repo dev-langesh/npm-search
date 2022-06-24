@@ -12,13 +12,13 @@
   },
   "keywords": [
     "search",
-    "autocomplete",
-    "node",
-    "node-search",
-    "array-search",
     "filter",
-    "array",
-    "array-filter"
+    "node",
+    "node search",
+    "array search",
+    "object search",
+    "array filter",
+    "object filter"
   ],
   "author": "langesh",
   "license": "ISC",
