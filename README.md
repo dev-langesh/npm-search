@@ -1,37 +1,54 @@
 # searchl
 
-An extraordinary package for searching item in an array written with simple js.
+An extraordinary package for searching items in the array.
 
-## Using Package
+## Usage
 
 ### import filter function
 
-```
+```js
 const { filter } = require("searchl");
 ```
 
-### Pass data and item to be filtered as an argument
+# Searching in array of strings
 
-```
-filter(data , searchItem);
+### pass data array and search string
+
+```js
+filter(data, searchString);
 ```
 
 The function will return all the matched cases in an array
 
 ## Example
 
-```
+```js
 const { filter } = require("searchl");
 
-const array = ["apple", "banana", "mango", "grapes"];
+const array = ["This", "is", "Langesh", "from", "India"];
 
-const filteredData = filter(array , "e");
+const filteredData = filter(array, "i ");
 
 console.log(filteredData);
 ```
 
 ### Output
 
+```js
+["This", "is", "India"];
 ```
-["apple" , "grapes"]
+
+# Searching in array of objects
+
+```js
+const arrayOfObj = [
+  { name: "Langesh", age: 18 },
+  { name: "Peger", age: 18 },
+];
+
+const filterByName = filter(arrayOfObj, { name: "l" });
+// return [{name: "Langesh", age: 18}]
+
+const filterByAge = filter(arrayOfObj, { age: 18 });
+//return [{name: "Langesh", age: 18}, {name: "Peter", age: 18}]
 ```

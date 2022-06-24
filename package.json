@@ -4,7 +4,7 @@
   "description": "Simple light weight package for filtering data in an array",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --watch"
   },
   "repository": {
     "type": "git",
@@ -26,5 +26,7 @@
     "url": "https://github.com/dev-langesh/npm-search/issues"
   },
   "homepage": "https://github.com/dev-langesh/npm-search#readme",
-  "dependencies": {}
+  "devDependencies": {
+    "jest": "^28.1.1"
+  }
 }
