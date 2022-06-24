@@ -43,7 +43,7 @@ console.log(filteredData);
 ```js
 const arrayOfObj = [
   { name: "Langesh", age: 18 },
-  { name: "Peger", age: 18 },
+  { name: "Peter", age: 18 },
 ];
 
 const filterByName = filter(arrayOfObj, { name: "l" });
