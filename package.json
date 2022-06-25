@@ -1,6 +1,6 @@
 {
   "name": "searchl",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Simple light weight package for filtering data in an array",
   "main": "index.js",
   "scripts": {
@@ -21,7 +21,7 @@
     "object filter"
   ],
   "author": "langesh",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/dev-langesh/searchl/issues"
   },
