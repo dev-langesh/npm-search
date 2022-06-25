@@ -2,6 +2,12 @@
 
 An extraordinary package for searching items in the array.
 
+## Features
+
+- search for array of strings
+- search for array of objects
+- tested with jest
+
 ## Usage
 
 ### import filter function
@@ -49,6 +55,9 @@ const arrayOfObj = [
 const filterByName = filter(arrayOfObj, { name: "l" });
 // return [{name: "Langesh", age: 18}]
 
+const filterByName = filter(arrayOfObj, { name: "e" });
+// return [{name: "Langesh", age: 18}, {name: "Peter", age: 18}]
+
 const filterByAge = filter(arrayOfObj, { age: 18 });
-//return [{name: "Langesh", age: 18}, {name: "Peter", age: 18}]
+// return [{name: "Langesh", age: 18}, {name: "Peter", age: 18}]
 ```
