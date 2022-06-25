@@ -22,4 +22,10 @@ describe("searching in array of objects", () => {
       { name: "langesh", age: 18 },
     ]);
   });
+
+  test("search with multiple object items", () => {
+    expect(filter(arrayOfObjects, { name: "Lang esh", age: 18 })).toMatchObject(
+      [{ name: "langesh", age: 18 }]
+    );
+  });
 });
