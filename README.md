@@ -6,7 +6,6 @@ An extraordinary package for searching items in the array.
 
 - search for array of strings
 - search for array of objects
-- tested with jest
 
 ## Usage
 
