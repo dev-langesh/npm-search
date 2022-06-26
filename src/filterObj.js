@@ -1,6 +1,7 @@
 function filterObj(data, searchItem) {
   const temp = data.slice();
-  let regex, filteredData;
+  let regex,
+    filteredData = [];
 
   const key = Object.keys(searchItem);
   const value = Object.values(searchItem);
@@ -11,6 +12,52 @@ function filterObj(data, searchItem) {
 
     if (typeof v === "number") {
       filteredData = temp.filter((item) => item[k] === v);
+      return filteredData;
+    }
+
+    if (typeof v === "object") {
+      let opt = Object.keys(v)[0],
+        val = Object.values(v)[0];
+
+      // checking the correct option
+      const option = ["$gt", "$lt", "$lte", "$gte", "$eq"];
+      if (option.includes(opt)) {
+        switch (opt) {
+          case "$gt":
+            filteredData = filteredData.concat(
+              temp.filter((item) => item[k] > val)
+            );
+
+            break;
+
+          case "$lt":
+            filteredData = filteredData.concat(
+              temp.filter((item) => item[k] < val)
+            );
+            break;
+
+          case "$lte":
+            filteredData = filteredData.concat(
+              temp.filter((item) => item[k] <= val)
+            );
+            break;
+
+          case "$gte":
+            filteredData = filteredData.concat(
+              temp.filter((item) => item[k] >= val)
+            );
+            break;
+
+          case "$eq":
+            filteredData = filteredData.concat(
+              temp.filter((item) => item[k] === val)
+            );
+            break;
+        }
+      } else {
+        return "Invalid option";
+      }
+      filteredData = [...new Set(filteredData)];
       return filteredData;
     }
 
