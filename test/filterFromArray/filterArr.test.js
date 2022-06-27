@@ -20,4 +20,14 @@ describe("Searching in array", () => {
       "is"
     );
   });
+
+  test("advanced without space", () => {
+    const array = ["This", "is", "Langesh", "from", "India"];
+    expect(filter(array, "thisislangesh")).toContain("Langesh", "This", "is");
+  });
+
+  test("test with space", () => {
+    const array = ["This", "is", "Langesh", "from", "India"];
+    expect(filter(array, "thi lan ges")).toMatchObject(["This", "Langesh"]);
+  });
 });

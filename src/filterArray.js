@@ -1,3 +1,8 @@
+const { splitByTwo } = require("./splitByTwo");
+const { splitByFive } = require("./splitByFive");
+const { splitByFour } = require("./splitByFour");
+const { splitByThree } = require("./splitByThree");
+
 function filterArray(data, searchItem) {
   const temp = data.slice();
 
@@ -14,6 +19,13 @@ function filterArray(data, searchItem) {
         const reg = new RegExp(i, "gi");
         filteredData.push(...temp.filter((item) => reg.test(item)));
       }
+    }
+
+    if (filteredData.length === 0) {
+      filteredData.push(...splitByFive(data, searchItem));
+      filteredData.push(...splitByFour(data, searchItem));
+      filteredData.push(...splitByThree(data, searchItem));
+      filteredData.push(...splitByTwo(data, searchItem));
     }
   }
 

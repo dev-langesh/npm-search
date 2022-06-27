@@ -1,3 +1,6 @@
+const { splitByFive } = require("./splitByFive");
+const { splitByTwo } = require("./splitByTwo");
+
 function filterObj(data, searchItem) {
   const temp = data.slice();
   let regex,
@@ -74,9 +77,9 @@ function filterObj(data, searchItem) {
           filteredData.push(...temp.filter((item) => regex.test(item[k])));
         }
       }
-      filteredData = [...new Set(filteredData)];
     }
   }
+  filteredData = [...new Set(filteredData)];
 
   return filteredData;
 }

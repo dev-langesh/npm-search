@@ -1,5 +1,9 @@
 # searchl
 
+[![NPM Version][npm-version-image]][npm-url]
+[![NPM Install Size][npm-install-size-image]][npm-install-size-url]
+[![NPM Downloads][npm-downloads-image]][npm-downloads-url]
+
 An extraordinary package for searching items in the array.
 
 ## Features
@@ -50,6 +54,16 @@ console.log(filteredData);
 ["This", "is", "India"];
 ```
 
+## Advanced array search
+
+```js
+const filteredData = filter(array, "thisislangesh");
+// return ["This","is","Langesh"]
+
+const filteredData = filter(array, "thi lan esh");
+// return ["This","Langesh"]
+```
+
 # Searching in array of objects
 
 ```js
@@ -58,10 +72,10 @@ const arrayOfObj = [
   { name: "Peter", age: 18 },
 ];
 
-const filterByName = filter(arrayOfObj, { name: "l" });
+let filterByName = filter(arrayOfObj, { name: "l" });
 // return [{name: "Langesh", age: 18}]
 
-const filterByName = filter(arrayOfObj, { name: "e" });
+filterByName = filter(arrayOfObj, { name: "e" });
 // return [{name: "Langesh", age: 18}, {name: "Peter", age: 18}]
 
 const filterByAge = filter(arrayOfObj, { age: 18 });
